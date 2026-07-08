@@ -3,7 +3,7 @@
 Demo for Convex + WorkOS backend
 
 - [x] Add Convex backend
-- [ ] Create rules protecting branches
-- [ ] Setup dependabot
+- [x] Create rules protecting branches
+- [x] Setup dependabot
 - [ ] Add Tanstack Start app for frontend example
 - [ ] Add WorkOS
