@@ -1,0 +1,6 @@
+@reference '#global.css';
+
+.root {
+  @apply w-full rounded border;
+  border-color: var(--color-border);
+}

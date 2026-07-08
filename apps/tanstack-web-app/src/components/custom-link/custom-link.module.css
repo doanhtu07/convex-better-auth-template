@@ -1,0 +1,11 @@
+@reference '#global.css';
+
+.root {
+  color: var(--color-primary-text);
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}
