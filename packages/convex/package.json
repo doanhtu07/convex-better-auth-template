@@ -1,0 +1,39 @@
+{
+  "name": "@packages/convex",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./api": {
+      "types": "./convex/_generated/api.d.ts",
+      "import": "./convex/_generated/api.js",
+      "default": "./convex/_generated/api.js"
+    },
+    "./server": {
+      "types": "./convex/_generated/server.d.ts",
+      "import": "./convex/_generated/server.js",
+      "default": "./convex/_generated/server.js"
+    },
+    "./dataModel": {
+      "types": "./convex/_generated/dataModel.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "convex dev",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "format": "prettier --check .",
+    "check": "prettier --write . && eslint \"**/*.{js,ts,tsx}\" --fix"
+  },
+  "dependencies": {
+    "convex": "^1.42.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.4",
+    "typescript-eslint": "^8.63.0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "*.{js,ts,tsx}": [
+    "pnpm --filter @packages/convex exec eslint --fix",
+    "pnpm --filter @packages/convex exec prettier --write"
+  ]
+}
