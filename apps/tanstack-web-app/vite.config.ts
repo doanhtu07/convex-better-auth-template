@@ -10,13 +10,19 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const config = defineConfig({
+  plugins: [devtools(), nitro(), tanstackStart(), viteReact(), tailwindcss()],
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
     tsconfigPaths: true,
   },
-  plugins: [devtools(), nitro(), tanstackStart(), viteReact(), tailwindcss()],
+
+  // Configure Vite to bundle @convex-dev/better-auth during SSR to avoid module resolution issues
+  ssr: {
+    noExternal: ['@convex-dev/better-auth'],
+  },
 })
 
 export default config

@@ -27,10 +27,13 @@
     "check": "prettier --write . && eslint \"**/*.{js,ts,tsx}\" --fix"
   },
   "dependencies": {
+    "@convex-dev/better-auth": "^0.12.5",
+    "better-auth": "1.6.15",
     "convex": "^1.42.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.0",
     "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.9.4",
