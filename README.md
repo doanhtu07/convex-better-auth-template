@@ -7,4 +7,4 @@ Demo for Convex + WorkOS backend
 - [x] Setup dependabot
 - [x] Add Tanstack Start app for frontend example
 - [x] Link Tanstack to Convex
-- [ ] Add WorkOS
+- [ ] Add Better Auth
