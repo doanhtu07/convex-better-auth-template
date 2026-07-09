@@ -1,6 +1,6 @@
-# convex-workos-template
+# convex-better-auth-template
 
-Demo for Convex + WorkOS backend
+Demo for Convex + Better Auth backend
 
 - [x] Add Convex backend
 - [x] Create rules protecting branches
