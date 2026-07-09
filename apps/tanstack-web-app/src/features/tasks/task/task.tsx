@@ -4,6 +4,7 @@ import { api } from '@packages/convex/api'
 import { useMutation } from '@tanstack/react-query'
 import styles from './task.module.css'
 import type { DataModel } from '@packages/convex/dataModel'
+import { Button } from '@/components/button/button'
 import { getTestId } from '@/utils/test-ids'
 
 type Props = {
@@ -41,14 +42,15 @@ export const Task = ({ task, 'data-testid': dataTestId }: Props) => {
         </span>
       </label>
 
-      <button
+      <Button
         className={styles.deleteButton}
         onClick={() => removeTask.mutate({ taskId: task._id })}
         disabled={removeTask.isPending}
+        isLoading={removeTask.isPending}
         {...getTestId([dataTestId, 'delete'])}
       >
         <X size={16} />
-      </button>
+      </Button>
     </div>
   )
 }

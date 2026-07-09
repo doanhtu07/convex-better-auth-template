@@ -4,6 +4,8 @@ import { api } from '@packages/convex/api'
 import { useMutation } from '@tanstack/react-query'
 import styles from './add-task.module.css'
 import type { SubmitEventHandler } from 'react'
+import { Button } from '@/components/button/button'
+import { Input } from '@/components/input/input'
 import { getTestId } from '@/utils/test-ids'
 
 type Props = {
@@ -31,24 +33,28 @@ export const AddTask = ({ 'data-testid': dataTestId }: Props) => {
       onSubmit={handleSubmit}
       {...getTestId([dataTestId, 'root'])}
     >
-      <input
-        className={styles.input}
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Add a task..."
-        disabled={addTask.isPending}
-        {...getTestId([dataTestId, 'input'])}
-      />
+      <div className={styles.inputWrapper}>
+        <Input
+          inputProps={{
+            type: 'text',
+            value: text,
+            onChange: (e) => setText(e.target.value),
+            placeholder: 'Add a task...',
+            disabled: addTask.isPending,
+          }}
+          {...getTestId([dataTestId, 'input'])}
+        />
+      </div>
 
-      <button
-        className={styles.button}
+      <Button
+        className={styles.submitButton}
         type="submit"
         disabled={addTask.isPending || !text.trim()}
+        isLoading={addTask.isPending}
         {...getTestId([dataTestId, 'submit'])}
       >
         Add
-      </button>
+      </Button>
     </form>
   )
 }
