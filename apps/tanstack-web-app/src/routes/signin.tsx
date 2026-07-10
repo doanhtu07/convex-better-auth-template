@@ -1,7 +1,7 @@
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { authClient } from '@/utils/auth/auth-client'
-import { getToken } from '@/utils/auth/auth-server'
 import styles from '@/styles/signin.module.css'
+import { CustomLink } from '@/components/custom-link/custom-link'
 
 const Signin = () => {
   const handleGoogleSignIn = () => {
@@ -44,16 +44,18 @@ const Signin = () => {
 
           <p>Sign in with Google</p>
         </button>
+
+        <CustomLink to="/">
+          <p>Home</p>
+        </CustomLink>
       </div>
     </div>
   )
 }
 
 export const Route = createFileRoute('/signin')({
-  beforeLoad: async () => {
-    const token = await getToken()
-
-    if (token) {
+  beforeLoad: ({ context }) => {
+    if (context.isAuthenticated) {
       throw redirect({ to: '/' })
     }
   },

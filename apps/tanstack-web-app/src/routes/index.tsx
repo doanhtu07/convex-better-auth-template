@@ -9,6 +9,7 @@ import { getTestId } from '@/utils/test-ids'
 import { Button } from '@/components/button/button'
 import { Divider } from '@/components/divider/divider'
 import { useTheme } from '@/providers/theme-provider'
+import { AuthControls } from '@/features/auth/auth-controls/auth-controls'
 import { AddTask } from '@/features/tasks/add-task/add-task'
 import { Task } from '@/features/tasks/task/task'
 
@@ -23,6 +24,10 @@ const Home = observer(() => {
 
   return (
     <main className={styles.root} {...getTestId([TEST_ID_ROOT, 'root'])}>
+      <AuthControls />
+
+      <Divider spaceVertical="1rem" />
+
       <p>{t('t_welcomeMessage')}</p>
 
       <Divider spaceVertical="1rem" />
@@ -61,5 +66,11 @@ const Home = observer(() => {
 // MARK: Route
 
 export const Route = createFileRoute('/')({
+  loader: async ({ context }) => {
+    await context.queryClient.ensureQueryData(
+      convexQuery(api.auth.getCurrentUser, {}),
+    )
+  },
+
   component: Home,
 })

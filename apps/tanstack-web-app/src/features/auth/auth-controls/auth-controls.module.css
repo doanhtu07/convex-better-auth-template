@@ -1,0 +1,9 @@
+@reference '#global.css';
+
+.root {
+  @apply flex items-center gap-4;
+}
+
+.email {
+  @apply text-sm;
+}

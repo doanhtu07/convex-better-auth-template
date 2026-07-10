@@ -17,7 +17,7 @@ Demo for Convex + Better Auth backend
 ---
 
 - [x] Add Better Auth
-- [ ] Setup Google auth
+- [x] Setup Google auth
 
 ## Convex + Better Auth
 
