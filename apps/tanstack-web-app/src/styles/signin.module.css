@@ -1,0 +1,36 @@
+@reference '#global.css';
+
+.root {
+  @apply flex min-h-screen items-center justify-center;
+}
+
+.card {
+  @apply flex flex-col items-center gap-6 rounded-lg border p-8 shadow-sm;
+  background-color: var(--color-bg);
+  border-color: var(--color-border);
+}
+
+.heading {
+  @apply m-0 text-xl font-semibold;
+  color: var(--color-text);
+}
+
+.googleButton {
+  @apply inline-flex cursor-pointer items-center gap-2 rounded px-6 py-2.5 text-sm font-medium no-underline;
+  background-color: var(--color-google-btn-bg);
+  color: var(--color-google-btn-text);
+  border: 1px solid var(--color-google-btn-border);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.googleButton:hover {
+  background-color: var(--color-google-btn-hover-bg);
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}

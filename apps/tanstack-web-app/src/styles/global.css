@@ -36,6 +36,12 @@
 
     /* Focus ring */
     --color-ring: color-mix(in srgb, theme('colors.blue.600'), transparent 20%);
+
+    /* Google Sign-In button */
+    --color-google-btn-bg: #ffffff;
+    --color-google-btn-text: #1f1f1f;
+    --color-google-btn-border: #dadce0;
+    --color-google-btn-hover-bg: #f8f9fa;
   }
 
   .dark {
@@ -62,6 +68,12 @@
     --color-border: theme('colors.gray.700');
 
     --color-ring: color-mix(in srgb, theme('colors.blue.400'), transparent 40%);
+
+    /* Google Sign-In button */
+    --color-google-btn-bg: #131314;
+    --color-google-btn-text: #e3e3e3;
+    --color-google-btn-border: #8e918f;
+    --color-google-btn-hover-bg: #1e1e1e;
   }
 }
 
