@@ -13,12 +13,21 @@ type Props = {
 }
 
 export const Task = ({ task, 'data-testid': dataTestId }: Props) => {
+  const convexToggle = useConvexMutation(api.tasks.toggle)
+  const convexRemove = useConvexMutation(api.tasks.remove)
+
   const toggleTask = useMutation({
-    mutationFn: useConvexMutation(api.tasks.toggle),
+    mutationFn: convexToggle,
+    onError: (error) => {
+      console.error('task - toggleTask - error:', error)
+    },
   })
 
   const removeTask = useMutation({
-    mutationFn: useConvexMutation(api.tasks.remove),
+    mutationFn: convexRemove,
+    onError: (error) => {
+      console.error('task - removeTask - error:', error)
+    },
   })
 
   // MARK: Renderers

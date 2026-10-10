@@ -13,11 +13,16 @@ type Props = {
 }
 
 export const AddTask = ({ 'data-testid': dataTestId }: Props) => {
-  const [text, setText] = useState('')
+  const convexAdd = useConvexMutation(api.tasks.add)
 
   const addTask = useMutation({
-    mutationFn: useConvexMutation(api.tasks.add),
+    mutationFn: convexAdd,
+    onError: (error) => {
+      console.error('add-task - addTask - error:', error)
+    },
   })
+
+  const [text, setText] = useState('')
 
   const handleSubmit: SubmitEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
