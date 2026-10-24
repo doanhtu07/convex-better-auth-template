@@ -32,7 +32,7 @@
     "better-auth": "1.6.17",
     "clsx": "^2.1.1",
     "convex": "^1.47.0",
-    "i18next": "^26.5.3",
+    "i18next": "^26.5.4",
     "lucide-react": "^1.60.0",
     "mobx": "^7.1.0",
     "mobx-react-lite": "^5.1.0",
