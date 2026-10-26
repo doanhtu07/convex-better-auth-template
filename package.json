@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@12.10.1",
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"

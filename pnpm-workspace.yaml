@@ -5,3 +5,11 @@ packages:
 allowBuilds:
   esbuild: true
   unrs-resolver: true
+
+permissions:
+  '@tanstack/devtools-vite':
+    skills: true
+  '@tanstack/react-start':
+    skills: true
+  '@tanstack/router-plugin':
+    skills: true

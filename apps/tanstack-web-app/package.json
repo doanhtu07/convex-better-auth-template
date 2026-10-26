@@ -32,8 +32,8 @@
     "better-auth": "1.6.17",
     "clsx": "^2.1.1",
     "convex": "^1.47.0",
-    "i18next": "^26.5.3",
-    "lucide-react": "^1.60.0",
+    "i18next": "^26.5.4",
+    "lucide-react": "^1.61.0",
     "mobx": "^7.1.0",
     "mobx-react-lite": "^5.1.0",
     "nitro": "3.0.260903-beta",
@@ -67,7 +67,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "rimraf": "^6.1.3",
     "typescript": "^6.0.3",
-    "vite": "^8.3.4",
+    "vite": "^8.3.5",
     "vitest": "^5.0.5",
     "web-vitals": "^6.2.3"
   }
