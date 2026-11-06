@@ -27,16 +27,16 @@
     "check": "prettier --write . && eslint \"**/*.{js,ts,tsx}\" --fix"
   },
   "dependencies": {
-    "@convex-dev/better-auth": "^0.12.5",
-    "better-auth": "1.6.17",
-    "convex": "^1.47.0"
+    "@convex-dev/better-auth": "^0.13.0",
+    "better-auth": "1.7.17",
+    "convex": "^1.49.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^26.6.5",
-    "eslint": "^10.13.0",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.9.10",
-    "typescript-eslint": "^8.72.0"
+    "typescript-eslint": "^8.72.1"
   }
 }
