@@ -1,6 +1,7 @@
 {
-  "*.{js,ts,tsx}": [
+  "**/*.{js,jsx,mjs,cjs,ts,tsx}": [
     "pnpm --filter @apps/tanstack-web-app exec eslint --fix",
     "pnpm --filter @apps/tanstack-web-app exec prettier --write"
-  ]
+  ],
+  "**/*.{css,html,json,md,yaml,yml}": "pnpm --filter @apps/tanstack-web-app exec prettier --write"
 }

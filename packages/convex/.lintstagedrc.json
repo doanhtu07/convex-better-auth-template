@@ -1,6 +1,7 @@
 {
-  "*.{js,ts,tsx}": [
+  "**/*.{js,jsx,mjs,cjs,ts,tsx}": [
     "pnpm --filter @packages/convex exec eslint --fix",
     "pnpm --filter @packages/convex exec prettier --write"
-  ]
+  ],
+  "**/*.{css,html,json,md,yaml,yml}": "pnpm --filter @packages/convex exec prettier --write"
 }
